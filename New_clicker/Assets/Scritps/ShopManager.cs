@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
+    public int wood;
+    public TMP_Text WoodUI;
     public int coins;
     public TMP_Text CoinsUI;
     public ShopItem[] shopItems;
@@ -17,7 +19,8 @@ public class ShopManager : MonoBehaviour
         for (int i = 0; i < shopItems.Length; i++)
         
             shopPanelsGO[i].SetActive(true);
-        
+
+        WoodUI.text = "woods" + wood.ToString();
         CoinsUI.text = "coins" + coins.ToString();
         loadpanels();
         CheckPurchare();
@@ -30,12 +33,19 @@ public class ShopManager : MonoBehaviour
         CheckPurchare() ;
 
     }
+    public void AddWood()
+    {
+        wood++;
+        WoodUI.text="woods"+ wood.ToString();
+        CheckPurchare();
+    }
 
     public void CheckPurchare()
     {
        for(int i = 0;i<shopItems.Length;i++)
         {
-            if (coins >= shopItems[i].Cost)
+            
+            if (coins >= shopItems[i].Cost& wood >= shopItems[i].woodCost)
             {
                 Mypurch[i].interactable = true;
             }
@@ -48,11 +58,15 @@ public class ShopManager : MonoBehaviour
 
     public void PurchItem(int btnNO)
     {
-        if (coins >= shopItems[btnNO].Cost)
+
+        if (coins>= shopItems[btnNO].Cost|| wood >= shopItems[btnNO].woodCost)
         {
-            coins= coins - shopItems[btnNO].Cost;
+            wood = wood - shopItems[btnNO].woodCost;
+            WoodUI.text = "woods" + wood.ToString();
+            coins = coins - shopItems[btnNO].Cost;
             CoinsUI.text="coins"+coins.ToString();
             CheckPurchare();
+          
         }
     }
 
@@ -69,6 +83,7 @@ public class ShopManager : MonoBehaviour
             shopPanels[i].titleText.text = shopItems[i].Title;
             shopPanels[i].DescriptionTXT.text = shopItems[i].description;
             shopPanels[i].costTxt.text = "coins" + shopItems[i].Cost.ToString();
+            shopPanels[i].woodTxt.text = "woods" + shopItems[i].woodCost.ToString();
         }
     }
 }

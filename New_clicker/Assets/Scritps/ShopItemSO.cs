@@ -9,4 +9,5 @@ public class ShopItem : ScriptableObject
  public string Title;
  public int Cost;
  public string description;
+    public int woodCost;
 }
