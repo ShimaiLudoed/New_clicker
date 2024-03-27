@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
+    
     public int wood;
     public TMP_Text WoodUI;
     public int coins;
@@ -14,6 +16,10 @@ public class ShopManager : MonoBehaviour
     public GameObject[] shopPanelsGO;
     public ShopTemplate[] shopPanels;
     public Button[] Mypurch;
+    public int Woodclick = 1;
+    public int CoinClick = 1;
+    
+  
     void Start()
     {
         for (int i = 0; i < shopItems.Length; i++)
@@ -28,14 +34,18 @@ public class ShopManager : MonoBehaviour
 
     public void AddCoin()
     {
-        coins++;
+        
+        coins+=CoinClick;
         CoinsUI.text = "coins" + coins.ToString();
         CheckPurchare() ;
+         
 
     }
+
     public void AddWood()
     {
-        wood++;
+       
+        wood+=Woodclick;
         WoodUI.text="woods"+ wood.ToString();
         CheckPurchare();
     }
@@ -58,15 +68,18 @@ public class ShopManager : MonoBehaviour
 
     public void PurchItem(int btnNO)
     {
-
-        if (coins>= shopItems[btnNO].Cost|| wood >= shopItems[btnNO].woodCost)
+        if (coins >= shopItems[btnNO].Cost && wood >= shopItems[btnNO].woodCost)
         {
-            wood = wood - shopItems[btnNO].woodCost;
+         
+            wood -= shopItems[btnNO].woodCost;
+            coins -= shopItems[btnNO].Cost;
+            shopItems[btnNO].productivityIncreaseWood++;
+            shopItems[btnNO].productivityIncreaseCoin++;
+            Woodclick = shopItems[btnNO].productivityIncreaseWood;
+            CoinClick = shopItems[btnNO].productivityIncreaseCoin;
             WoodUI.text = "woods" + wood.ToString();
-            coins = coins - shopItems[btnNO].Cost;
-            CoinsUI.text="coins"+coins.ToString();
+            CoinsUI.text = "coins" + coins.ToString();
             CheckPurchare();
-          
         }
     }
 

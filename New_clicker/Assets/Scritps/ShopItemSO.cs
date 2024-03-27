@@ -7,7 +7,9 @@ using UnityEngine;
 public class ShopItem : ScriptableObject
 {
  public string Title;
- public int Cost;
- public string description;
-    public int woodCost;
+ public int Cost; 
+ public string description; 
+ public int woodCost;
+ public int productivityIncreaseWood;
+ public int productivityIncreaseCoin;
 }
