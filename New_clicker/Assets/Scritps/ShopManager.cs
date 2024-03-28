@@ -77,6 +77,10 @@ public class ShopManager : MonoBehaviour
             {
                 shopItems[btnNO].productivityIncreaseWood++;
             }
+            if (shopItems[btnNO].Title == "coinUPG")
+            {
+                shopItems[btnNO].productivityIncreaseCoin++;
+            }
             Woodclick += shopItems[btnNO].productivityIncreaseWood;
             CoinClick += shopItems[btnNO].productivityIncreaseCoin;
             WoodUI.text = "woods" + wood.ToString();
