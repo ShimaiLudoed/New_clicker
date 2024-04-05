@@ -8,4 +8,9 @@ public class Scene_Manager : MonoBehaviour
     {
         SceneManager.LoadScene("G.M.Scene");
     }
+
+    public void WoodTP()
+    {
+        SceneManager.LoadScene("W.L");
+    }
 }

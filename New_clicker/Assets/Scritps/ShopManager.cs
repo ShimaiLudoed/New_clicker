@@ -7,16 +7,14 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
-    
-    
     public TMP_Text WoodUI;
-    public TMP_Text CoinsUI;
+    public TMP_Text RockUI;
     public ShopItem[] shopItems;
     //public GameObject[] shopPanelsGO;
     public ShopTemplate[] shopPanels;
     public Button[] Mypurch;
     public int Woodclick = 1;
-    public int CoinClick = 1;
+    public int RockClick = 1;
     
   
     void Start()
@@ -26,7 +24,7 @@ public class ShopManager : MonoBehaviour
             shopPanels[i].gameObject.SetActive(true);
 
         WoodUI.text = "woods" + ResourceBank.Instance.wood.ToString();
-        CoinsUI.text = "coins" + ResourceBank.Instance.coins.ToString();
+        RockUI.text = "rocks" + ResourceBank.Instance.rock.ToString();
         loadpanels();
         CheckPurchare();
     }
@@ -34,8 +32,8 @@ public class ShopManager : MonoBehaviour
     public void AddCoin()
     {
         
-        ResourceBank.Instance.coins+=CoinClick;
-        CoinsUI.text = "coins" + ResourceBank.Instance.coins.ToString();
+        ResourceBank.Instance.rock+=RockClick;
+        RockUI.text = "rocks" + ResourceBank.Instance.rock.ToString();
         CheckPurchare() ;
          
 
@@ -54,7 +52,7 @@ public class ShopManager : MonoBehaviour
        for(int i = 0;i<shopItems.Length;i++)
         {
             
-            if (ResourceBank.Instance.coins >= shopItems[i].Cost& ResourceBank.Instance.wood >= shopItems[i].woodCost)
+            if (ResourceBank.Instance.rock >= shopItems[i].rockCost& ResourceBank.Instance.wood >= shopItems[i].woodCost)
             {
                 Mypurch[i].interactable = true;
             }
@@ -67,23 +65,23 @@ public class ShopManager : MonoBehaviour
 
     public void PurchItem(int btnNO)
     {
-        if (ResourceBank.Instance.coins >= shopItems[btnNO].Cost && ResourceBank.Instance.wood >= shopItems[btnNO].woodCost)
+        if (ResourceBank.Instance.rock >= shopItems[btnNO].rockCost && ResourceBank.Instance.wood >= shopItems[btnNO].woodCost)
         {
          
             ResourceBank.Instance.wood -= shopItems[btnNO].woodCost;
-            ResourceBank.Instance.coins-= shopItems[btnNO].Cost;
-            if (shopItems[btnNO] is ShopItem item)
+            ResourceBank.Instance.rock-= shopItems[btnNO].rockCost;
+            if (shopItems[btnNO].Title == "woodUPG")
             {
                 shopItems[btnNO].productivityIncreaseWood++;
             }
-            if (shopItems[btnNO].Title == "coinUPG")
+            if (shopItems[btnNO].Title == "rockUPG")
             {
-                shopItems[btnNO].productivityIncreaseCoin++;
+                shopItems[btnNO].productivityIncreaseRock++;
             }
             Woodclick += shopItems[btnNO].productivityIncreaseWood;
-            CoinClick += shopItems[btnNO].productivityIncreaseCoin;
+            RockClick += shopItems[btnNO].productivityIncreaseRock;
             WoodUI.text = "woods" + ResourceBank.Instance.wood.ToString();
-            CoinsUI.text = "coins" + ResourceBank.Instance.coins.ToString();
+            RockUI.text = "rocks" + ResourceBank.Instance.rock.ToString();
             CheckPurchare();
         }
     }
@@ -100,7 +98,7 @@ public class ShopManager : MonoBehaviour
         {
             shopPanels[i].titleText.text = shopItems[i].Title;
             shopPanels[i].DescriptionTXT.text = shopItems[i].description;
-            shopPanels[i].costTxt.text = "coins" + shopItems[i].Cost.ToString();
+            shopPanels[i].rockTxt.text = "rocks" + shopItems[i].rockCost.ToString();
             shopPanels[i].woodTxt.text = "woods" + shopItems[i].woodCost.ToString();
         }
     }

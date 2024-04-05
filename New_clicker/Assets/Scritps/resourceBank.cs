@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ResourceBank : MonoBehaviour
 {
-    public int coins { get; set; }
+    public int rock { get; set; }
     public int wood { get; set; }
 
     public static ResourceBank Instance { get; private set; }
