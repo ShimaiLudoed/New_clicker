@@ -29,7 +29,7 @@ public class ShopManager : MonoBehaviour
         CheckPurchare();
     }
 
-    public void AddCoin()
+    public void AddRock()
     {
         
         ResourceBank.Instance.rock+=RockClick;
