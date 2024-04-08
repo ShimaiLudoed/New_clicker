@@ -9,9 +9,13 @@ public class ShopItem : ScriptableObject
 {
     
  public string Title;
- public int rockCost; 
  public string description; 
+ public int rockCost; 
  public int woodCost;
+ public int woolCost;
+ public int ironCost;
  public int productivityIncreaseWood;
+ public int productivityIncreaseWool;
+ public int productivityIncreaseIron;
  public int productivityIncreaseRock;
 }
