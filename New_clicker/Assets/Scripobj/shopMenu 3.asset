@@ -12,8 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4dd8d74480569f42ba64f1062806cbe, type: 3}
   m_Name: shopMenu 3
   m_EditorClassIdentifier: 
-  Title: 
-  Cost: 0
-  description: 
+  Title: WoolUPG
+  description: "\u0443\u043B\u0443\u0447\u0448\u0430\u0435\u0442 \u0432\u0430\u0448\u0443
+    \u0448\u0435\u0440\u0441\u0442\u044C "
+  rockCost: 0
   woodCost: 0
-  productivityIncrease: 0
+  woolCost: 5
+  ironCost: 0
+  WoodproductivityIncrease: 0
+  WoolproductivityIncrease: 0
+  IronproductivityIncrease: 0
+  RockproductivityIncrease: 0
