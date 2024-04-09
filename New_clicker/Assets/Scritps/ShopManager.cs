@@ -24,8 +24,9 @@ public class ShopManager : MonoBehaviour
     void Start()
     {
         for (int i = 0; i < shopItems.Length; i++)
-        
+        {
             shopPanels[i].gameObject.SetActive(true);
+        }
 
         WoolUI.text = "wools" + ResourceBank.Instance.wool.ToString();
         IronUI.text = "irons" + ResourceBank.Instance.wood.ToString();
