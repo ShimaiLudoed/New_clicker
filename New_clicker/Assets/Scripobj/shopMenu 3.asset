@@ -12,13 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4dd8d74480569f42ba64f1062806cbe, type: 3}
   m_Name: shopMenu 3
   m_EditorClassIdentifier: 
-  Title: 1111
-  description: 1111
-  rockCost: 0
-  woodCost: 0
-  woolCost: 0
-  ironCost: 0
-  productivityIncreaseWood: 0
-  productivityIncreaseWool: 0
-  productivityIncreaseIron: 0
-  productivityIncreaseRock: 0
+

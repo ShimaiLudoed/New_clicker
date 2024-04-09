@@ -14,8 +14,8 @@ public class ShopItem : ScriptableObject
  public int woodCost;
  public int woolCost;
  public int ironCost;
- public int productivityIncreaseWood;
- public int productivityIncreaseWool;
- public int productivityIncreaseIron;
- public int productivityIncreaseRock;
+ public int WoodproductivityIncrease;
+ public int WoolproductivityIncrease;
+ public int IronproductivityIncrease;
+ public int RockproductivityIncrease;
 }
