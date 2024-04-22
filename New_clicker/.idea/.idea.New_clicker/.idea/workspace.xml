@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95293659-0e66-44c1-b08c-a40eae539d75" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Item template.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Item template.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/G.M.Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/G.M.Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/shopMenu 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/shopMenu 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/shopMenu 2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/shopMenu 2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/shopMenu 3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/shopMenu 3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/shopMenu.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/shopMenu.asset.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="95293659-0e66-44c1-b08c-a40eae539d75" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
