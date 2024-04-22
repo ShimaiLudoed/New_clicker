@@ -9,6 +9,7 @@ public class ResourceBank : MonoBehaviour
     public int wood { get; set; }
     public int wool { get; set; }
     public int iron { get; set; }
+    public int rope { get; set; }
 
     public static ResourceBank Instance { get; private set; }
     private void Awake()

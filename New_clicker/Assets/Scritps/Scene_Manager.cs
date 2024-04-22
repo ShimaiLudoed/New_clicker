@@ -13,4 +13,21 @@ public class Scene_Manager : MonoBehaviour
     {
         SceneManager.LoadScene("W.L");
     }
+    public void WoolTP()
+    {
+        SceneManager.LoadScene("S.L");
+    }
+    public void IronTP()
+    {
+        SceneManager.LoadScene("I.L");
+    }
+    public void RockTP()
+    {
+        SceneManager.LoadScene("R.L");
+    }
+    public void LeafTP()
+    {
+        SceneManager.LoadScene("L.L");
+    }
+    
 }

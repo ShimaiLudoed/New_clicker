@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4dd8d74480569f42ba64f1062806cbe, type: 3}
   m_Name: IronUPG
   m_EditorClassIdentifier: 
-  Title: 
-  description: 
+  Title: 1
+  description: 1
   rockCost: 0
   woodCost: 0
   woolCost: 0

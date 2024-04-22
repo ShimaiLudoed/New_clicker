@@ -12,4 +12,6 @@ public class ShopTemplate : MonoBehaviour
     public TMP_Text woodTxt;
     public TMP_Text woolTxt;
     public TMP_Text ironTxt;
+    public TMP_Text ropeTxt;
+    public TMP_Text leafTxt;
 }

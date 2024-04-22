@@ -670,7 +670,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1617612845}
         m_TargetAssemblyTypeName: Click, Assembly-CSharp
-        m_MethodName: AddWood
+        m_MethodName: AddLeaf
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -766,6 +766,7 @@ MonoBehaviour:
   RockClick: 1
   WoolClick: 1
   IronClick: 1
+  LeafClick: 1
 --- !u!1 &1667437266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,7 +1025,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041B\u0435\u0441\n"
+  m_text: "\u041A\u0443\u0441\u0442\u0438\u043A\u0438\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

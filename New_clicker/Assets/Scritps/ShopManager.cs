@@ -11,61 +11,31 @@ public class ShopManager : MonoBehaviour
     public TMP_Text WoolUI;
     public TMP_Text WoodUI;
     public TMP_Text RockUI;
+    public TMP_Text LeafUI;
+    public TMP_Text RopeUI;
     public ShopItem[] shopItems;
     //public GameObject[] shopPanelsGO;
     public ShopTemplate[] shopPanels;
     public Button[] Mypurch;
-    public int Woodclick = 1;
-    public int RockClick = 1;
-    public int WoolClick = 1;
-    public int IronClick = 1;
+    private Click click;
     
-  
-  
     void Start()
     {
         for (int i = 0; i < shopItems.Length; i++)
         {
             shopPanels[i].gameObject.SetActive(true);
         }
-        WoolUI.text = "wools" + ResourceBank.Instance.wool.ToString();
-        IronUI.text = "irons" + ResourceBank.Instance.wood.ToString();
+     
         WoodUI.text = "woods" + ResourceBank.Instance.wood.ToString();
         RockUI.text = "rocks" + ResourceBank.Instance.rock.ToString();
+        WoolUI.text = "wools" + ResourceBank.Instance.wool.ToString();
+        IronUI.text = "irons" + ResourceBank.Instance.iron.ToString();
         
         loadpanels();
         CheckPurchare();
     }
 
-    public void AddIron()
-    {
-        ResourceBank.Instance.iron += IronClick;
-        IronUI.text = "irons" + ResourceBank.Instance.iron.ToString();
-    }
-
-    public void AddWool()
-    {
-        ResourceBank.Instance.wool += WoolClick;
-        WoolUI.text = "wools" + ResourceBank.Instance.wool.ToString();
-        CheckPurchare();
-    }
-
-    public void AddRock()
-    {
-        
-        ResourceBank.Instance.rock+=RockClick;
-        RockUI.text = "rocks" + ResourceBank.Instance.rock.ToString();
-        CheckPurchare() ;
-         
-
-    }
-
-    public void AddWood()
-    {
-        ResourceBank.Instance.wood+=Woodclick;
-        WoodUI.text="woods"+ ResourceBank.Instance.wood.ToString();
-        CheckPurchare();
-    }
+   
 
     public void CheckPurchare()
     {
@@ -94,7 +64,7 @@ public class ShopManager : MonoBehaviour
             
             if (shopItems[btnNO].Title == "WoodUpg")
             {
-                Woodclick++;
+                click.Woodclick++;
             }
             if (shopItems[btnNO].Title == "rockUPG")
             {
@@ -109,10 +79,10 @@ public class ShopManager : MonoBehaviour
                 shopItems[btnNO].WoolproductivityIncrease++;
             }
 
-            WoolClick += shopItems[btnNO].WoolproductivityIncrease;
-            IronClick += shopItems[btnNO].IronproductivityIncrease;
-            Woodclick += shopItems[btnNO].WoodproductivityIncrease;
-            RockClick += shopItems[btnNO].RockproductivityIncrease;
+            click.WoolClick += shopItems[btnNO].WoolproductivityIncrease;
+            click.IronClick += shopItems[btnNO].IronproductivityIncrease;
+            click. Woodclick += shopItems[btnNO].WoodproductivityIncrease;
+            click.RockClick += shopItems[btnNO].RockproductivityIncrease;
             
             WoolUI.text = "wools" + ResourceBank.Instance.wool.ToString();
             IronUI.text = "irons" + ResourceBank.Instance.iron.ToString();

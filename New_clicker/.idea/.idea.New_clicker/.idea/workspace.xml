@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95293659-0e66-44c1-b08c-a40eae539d75" name="Changes" comment="" />
+    <list default="true" id="95293659-0e66-44c1-b08c-a40eae539d75" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.New_clicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.New_clicker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/G.M.Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/G.M.Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/I.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/I.L.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/R.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/R.L.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/S.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/S.L.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/W.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/W.L.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/IronUPG.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/IronUPG.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/RockUPG.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/RockUPG.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/Scene_Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/Scene_Manager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/ShopItemSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/ShopItemSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/ShopManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/ShopManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/ShopTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/ShopTemplate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/resourceBank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/resourceBank.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +30,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scritps/Click.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scritps/Scene_Manager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scritps/resourceBank.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
