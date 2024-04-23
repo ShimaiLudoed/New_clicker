@@ -1,58 +1,41 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Click : MonoBehaviour
 {
-    public ShopManager shop;
+
     public int Woodclick = 1;
     public int RockClick = 1;
     public int WoolClick = 1;
     public int IronClick = 1;
     public int LeafClick = 1;
     public int ropeclick = 1;
+
+
+
     public void AddIron()
     {
-        ResourceBank.Instance.iron += IronClick;
-        shop.IronUI.text = "irons" + ResourceBank.Instance.iron.ToString();
-        shop.CheckPurchare();
+        ResourceBank.Instance.iron += IronClick += Upgrade.Instance.IronproductivityIncrease;
     }
     public void AddLeaf()
     {
-        ResourceBank.Instance.iron += IronClick;
-        shop.IronUI.text = "irons" + ResourceBank.Instance.iron.ToString();
-        shop.CheckPurchare();
+        ResourceBank.Instance.leaf += LeafClick += Upgrade.Instance.Leafprod;
     }
 
     public void AddWool()
     {
-        ResourceBank.Instance.wool += WoolClick;
-        shop.WoolUI.text = "wools" + ResourceBank.Instance.wool.ToString();
-        shop.CheckPurchare();
+        ResourceBank.Instance.wool += WoolClick+= Upgrade.Instance.WoolproductivityIncrease;
     }
 
     public void AddRock()
     {
-        
-        ResourceBank.Instance.rock+=RockClick;
-        shop.RockUI.text = "rocks" + ResourceBank.Instance.rock.ToString();
-        shop.CheckPurchare() ;
-         
-
+        ResourceBank.Instance.rock+=RockClick += Upgrade.Instance.RockproductivityIncrease;
     }
 
     public void AddWood()
     {
-        ResourceBank.Instance.wood+=Woodclick;
-        if ( shop.WoodUI != null)
-        {
-            shop.WoodUI.text = "woods" + ResourceBank.Instance.wood.ToString();
-        }
-        else
-        {
-            return;
-        }
-
-        shop.CheckPurchare();
+        ResourceBank.Instance.wood+=Woodclick+=Upgrade.Instance.WoodproductivityIncrease;
     }
 }

@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95293659-0e66-44c1-b08c-a40eae539d75" name="Changes" comment="" />
+    <list default="true" id="95293659-0e66-44c1-b08c-a40eae539d75" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.New_clicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.New_clicker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/G.M.Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/G.M.Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/M.M.Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/M.M.Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/Click.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/Click.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/ShopItemSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/ShopItemSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/ShopManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/ShopManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +23,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scritps/Click.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scritps/Scene_Manager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Athlon/Documents/GitHub/New_clicker/New_clicker/Assets/Scritps/ShopManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scritps/Upgrade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scritps/resourceBank.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -43,15 +52,15 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\admin\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\Athlon\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Athlon\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\Athlon\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\unity\2022.3.14f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Unity\2022.3.14f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\admin\GitHub\New_clicker\New_clicker -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\admin\GitHub\New_clicker\New_clicker" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -59,7 +68,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\unity\2022.3.14f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Unity\2022.3.14f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\admin\GitHub\New_clicker\New_clicker -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\admin\GitHub\New_clicker\New_clicker" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -107,6 +116,7 @@
       <workItem from="1712599271089" duration="3000000" />
       <workItem from="1712693437728" duration="1000" />
       <workItem from="1713863350016" duration="6286000" />
+      <workItem from="1713898728449" duration="4338000" />
     </task>
     <servers />
   </component>
@@ -115,6 +125,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

@@ -68,28 +68,22 @@ public class ShopManager : MonoBehaviour
             
             if (shopItems[btnNO].Title == "WoodUpg")
             {
-                click.Woodclick++;
+                Upgrade.Instance.WoodproductivityIncrease++;
             }
             if (shopItems[btnNO].Title == "rockUPG")
+
             {
-                shopItems[btnNO].RockproductivityIncrease++;
+                Upgrade.Instance.RockproductivityIncrease++;
             }
             if (shopItems[btnNO].Title == "IronUPG")
             {
-                shopItems[btnNO].IronproductivityIncrease++;
+                Upgrade.Instance.IronproductivityIncrease++;
             }
             if (shopItems[btnNO].Title=="WoolUPG")
             {
-                shopItems[btnNO].WoolproductivityIncrease++;
+                Upgrade.Instance.WoolproductivityIncrease++;
             }
             
-            click.WoolClick += shopItems[btnNO].WoolproductivityIncrease;
-            click.IronClick += shopItems[btnNO].IronproductivityIncrease;
-            click. Woodclick += shopItems[btnNO].WoodproductivityIncrease;
-            click.RockClick += shopItems[btnNO].RockproductivityIncrease;
-            click.LeafClick += shopItems[btnNO].Leafprod;
-            click.ropeclick += shopItems[btnNO].ropeprod;
-                
             WoolUI.text = "wools" + ResourceBank.Instance.wool.ToString();
             IronUI.text = "irons" + ResourceBank.Instance.iron.ToString();
             WoodUI.text = "woods" + ResourceBank.Instance.wood.ToString();
@@ -99,8 +93,6 @@ public class ShopManager : MonoBehaviour
             CheckPurchare();
         }
     }
-
-    
     void Update()
     {
         RopeUI.text = "ropes" + ResourceBank.Instance.rope.ToString();
@@ -109,8 +101,8 @@ public class ShopManager : MonoBehaviour
         WoolUI.text = "wools" + ResourceBank.Instance.wool.ToString();
         WoodUI.text = "woods" + ResourceBank.Instance.wood.ToString();
         IronUI.text = "irons" + ResourceBank.Instance.iron.ToString();
+        CheckPurchare();
     }
-
     public void loadpanels ()
     {
         for (int i = 0; i < shopItems.Length; i++)
