@@ -17,7 +17,7 @@ public class ShopManager : MonoBehaviour
     //public GameObject[] shopPanelsGO;
     public ShopTemplate[] shopPanels;
     public Button[] Mypurch;
-    private Click click;
+    public Click click;
     
     void Start()
     {
@@ -82,12 +82,14 @@ public class ShopManager : MonoBehaviour
             {
                 shopItems[btnNO].WoolproductivityIncrease++;
             }
-
+            
             click.WoolClick += shopItems[btnNO].WoolproductivityIncrease;
             click.IronClick += shopItems[btnNO].IronproductivityIncrease;
             click. Woodclick += shopItems[btnNO].WoodproductivityIncrease;
             click.RockClick += shopItems[btnNO].RockproductivityIncrease;
-            
+            click.LeafClick += shopItems[btnNO].Leafprod;
+            click.ropeclick += shopItems[btnNO].ropeprod;
+                
             WoolUI.text = "wools" + ResourceBank.Instance.wool.ToString();
             IronUI.text = "irons" + ResourceBank.Instance.iron.ToString();
             WoodUI.text = "woods" + ResourceBank.Instance.wood.ToString();
@@ -101,7 +103,12 @@ public class ShopManager : MonoBehaviour
     
     void Update()
     {
-        
+        RopeUI.text = "ropes" + ResourceBank.Instance.rope.ToString();
+        LeafUI.text = "leafs" + ResourceBank.Instance.leaf.ToString();
+        RockUI.text = "rocks" + ResourceBank.Instance.rock.ToString();
+        WoolUI.text = "wools" + ResourceBank.Instance.wool.ToString();
+        WoodUI.text = "woods" + ResourceBank.Instance.wood.ToString();
+        IronUI.text = "irons" + ResourceBank.Instance.iron.ToString();
     }
 
     public void loadpanels ()
@@ -114,7 +121,8 @@ public class ShopManager : MonoBehaviour
             shopPanels[i].woodTxt.text = "woods" + shopItems[i].woodCost.ToString();
             shopPanels[i].ironTxt.text = "irons" + shopItems[i].ironCost.ToString();
             shopPanels[i].woolTxt.text = "wools" + shopItems[i].woolCost.ToString();
-        
+            shopPanels[i].leafTxt.text = "leafs" + shopItems[i].LeafCost.ToString();
+            shopPanels[i].ropeTxt.text = "ropes" + shopItems[i].RopeCost.ToString();
         }
     }
 }

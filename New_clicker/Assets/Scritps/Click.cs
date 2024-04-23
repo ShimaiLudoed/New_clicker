@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Click : MonoBehaviour
 {
-    private ShopManager shop;
+    public ShopManager shop;
     public int Woodclick = 1;
     public int RockClick = 1;
     public int WoolClick = 1;
     public int IronClick = 1;
     public int LeafClick = 1;
-    
+    public int ropeclick = 1;
     public void AddIron()
     {
         ResourceBank.Instance.iron += IronClick;
@@ -44,9 +44,13 @@ public class Click : MonoBehaviour
     public void AddWood()
     {
         ResourceBank.Instance.wood+=Woodclick;
-        if (shop.WoodUI != null)
+        if ( shop.WoodUI != null)
         {
             shop.WoodUI.text = "woods" + ResourceBank.Instance.wood.ToString();
+        }
+        else
+        {
+            return;
         }
 
         shop.CheckPurchare();

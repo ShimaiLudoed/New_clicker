@@ -5280,6 +5280,7 @@ MonoBehaviour:
   - {fileID: 357547195}
   - {fileID: 1568260359}
   - {fileID: 1354018810}
+  click: {fileID: 1963447367}
 --- !u!114 &1963447367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5292,11 +5293,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca77d6717f88ac04b94ad68ca8476880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shop: {fileID: 1963447366}
   Woodclick: 1
   RockClick: 1
   WoolClick: 1
   IronClick: 1
   LeafClick: 1
+  ropeclick: 1
 --- !u!1 &1975646441
 GameObject:
   m_ObjectHideFlags: 0
