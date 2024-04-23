@@ -6,11 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="95293659-0e66-44c1-b08c-a40eae539d75" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.New_clicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.New_clicker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/G.M.Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/G.M.Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/M.M.Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/M.M.Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scritps/Click.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/Click.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scritps/ShopItemSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/ShopItemSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scritps/ShopManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/ShopManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/I.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/I.L.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/R.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/R.L.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/S.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/S.L.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Shop_test.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Shop_test.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/W.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/W.L.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +119,7 @@
       <workItem from="1712599271089" duration="3000000" />
       <workItem from="1712693437728" duration="1000" />
       <workItem from="1713863350016" duration="6286000" />
-      <workItem from="1713898728449" duration="4338000" />
+      <workItem from="1713898728449" duration="4504000" />
     </task>
     <servers />
   </component>

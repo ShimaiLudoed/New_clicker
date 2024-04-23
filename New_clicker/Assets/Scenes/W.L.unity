@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 1576608465}
   - component: {fileID: 1576608464}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Res
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 1617612844}
   - component: {fileID: 1617612845}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Click
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -767,6 +767,7 @@ MonoBehaviour:
   WoolClick: 1
   IronClick: 1
   LeafClick: 1
+  ropeclick: 1
 --- !u!1 &1667437266
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,7 +781,7 @@ GameObject:
   - component: {fileID: 1667437269}
   - component: {fileID: 1667437268}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: BackTp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -980,7 +981,7 @@ GameObject:
   - component: {fileID: 1806543455}
   - component: {fileID: 1806543454}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1114,7 +1115,7 @@ GameObject:
   - component: {fileID: 2027913512}
   - component: {fileID: 2027913511}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: 'Game_panel '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

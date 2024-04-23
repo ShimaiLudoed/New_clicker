@@ -157,6 +157,7 @@ MonoBehaviour:
   WoolClick: 1
   IronClick: 1
   LeafClick: 1
+  ropeclick: 1
 --- !u!4 &33249932
 Transform:
   m_ObjectHideFlags: 0
@@ -253,7 +254,7 @@ GameObject:
   - component: {fileID: 254634628}
   - component: {fileID: 254634627}
   m_Layer: 5
-  m_Name: Button
+  m_Name: AddRes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -658,7 +659,7 @@ GameObject:
   - component: {fileID: 1408765167}
   - component: {fileID: 1408765166}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: BackTp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1102,7 +1103,7 @@ GameObject:
   - component: {fileID: 1810308206}
   - component: {fileID: 1810308205}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
