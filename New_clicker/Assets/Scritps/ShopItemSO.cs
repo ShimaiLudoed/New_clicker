@@ -15,6 +15,7 @@ public class ShopItem : ScriptableObject
  public int woolCost;
  public int ironCost;
  public int RopeCost;
+ public int LeafCost;
  public int WoodproductivityIncrease;
  public int WoolproductivityIncrease;
  public int IronproductivityIncrease;

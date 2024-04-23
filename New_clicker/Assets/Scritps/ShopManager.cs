@@ -25,7 +25,9 @@ public class ShopManager : MonoBehaviour
         {
             shopPanels[i].gameObject.SetActive(true);
         }
-     
+
+        RopeUI.text = "ropes" + ResourceBank.Instance.rope.ToString();
+        LeafUI.text = "leafs" + ResourceBank.Instance.leaf.ToString();
         WoodUI.text = "woods" + ResourceBank.Instance.wood.ToString();
         RockUI.text = "rocks" + ResourceBank.Instance.rock.ToString();
         WoolUI.text = "wools" + ResourceBank.Instance.wool.ToString();
@@ -42,7 +44,7 @@ public class ShopManager : MonoBehaviour
        for(int i = 0;i<shopItems.Length;i++)
         {
             
-            if (ResourceBank.Instance.rock >= shopItems[i].rockCost& ResourceBank.Instance.wood >= shopItems[i].woodCost & ResourceBank.Instance.wool>= shopItems[i].woolCost & ResourceBank.Instance.iron>=shopItems[i].ironCost)
+            if (ResourceBank.Instance.rock >= shopItems[i].rockCost& ResourceBank.Instance.wood >= shopItems[i].woodCost & ResourceBank.Instance.wool>= shopItems[i].woolCost & ResourceBank.Instance.iron>=shopItems[i].ironCost & ResourceBank.Instance.leaf>=shopItems[i].LeafCost & ResourceBank.Instance.rope>=shopItems[i].RopeCost)
             {
                 Mypurch[i].interactable = true;
             }
@@ -55,12 +57,14 @@ public class ShopManager : MonoBehaviour
 
     public void PurchItem(int btnNO)
     {
-        if (ResourceBank.Instance.rock >= shopItems[btnNO].rockCost & ResourceBank.Instance.wood >= shopItems[btnNO].woodCost & ResourceBank.Instance.wool>= shopItems[btnNO].woolCost & ResourceBank.Instance.iron>=shopItems[btnNO].ironCost)
+        if (ResourceBank.Instance.rock >= shopItems[btnNO].rockCost & ResourceBank.Instance.wood >= shopItems[btnNO].woodCost & ResourceBank.Instance.wool>= shopItems[btnNO].woolCost & ResourceBank.Instance.iron>=shopItems[btnNO].ironCost & ResourceBank.Instance.leaf>=shopItems[btnNO].LeafCost & ResourceBank.Instance.rope>=shopItems[btnNO].RopeCost)
         {
             ResourceBank.Instance.iron -= shopItems[btnNO].ironCost;
             ResourceBank.Instance.wool -= shopItems[btnNO].woolCost;
             ResourceBank.Instance.wood -= shopItems[btnNO].woodCost;
             ResourceBank.Instance.rock -= shopItems[btnNO].rockCost;
+            ResourceBank.Instance.leaf -= shopItems[btnNO].LeafCost;
+            ResourceBank.Instance.rope -= shopItems[btnNO].RopeCost;
             
             if (shopItems[btnNO].Title == "WoodUpg")
             {
@@ -88,6 +92,8 @@ public class ShopManager : MonoBehaviour
             IronUI.text = "irons" + ResourceBank.Instance.iron.ToString();
             WoodUI.text = "woods" + ResourceBank.Instance.wood.ToString();
             RockUI.text = "rocks" + ResourceBank.Instance.rock.ToString();
+            LeafUI.text = "leafs" + ResourceBank.Instance.leaf.ToString();
+            RopeUI.text = "ropes" + ResourceBank.Instance.rope.ToString();
             CheckPurchare();
         }
     }
@@ -108,6 +114,7 @@ public class ShopManager : MonoBehaviour
             shopPanels[i].woodTxt.text = "woods" + shopItems[i].woodCost.ToString();
             shopPanels[i].ironTxt.text = "irons" + shopItems[i].ironCost.ToString();
             shopPanels[i].woolTxt.text = "wools" + shopItems[i].woolCost.ToString();
+        
         }
     }
 }

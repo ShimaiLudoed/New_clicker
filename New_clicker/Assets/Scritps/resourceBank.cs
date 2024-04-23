@@ -10,6 +10,7 @@ public class ResourceBank : MonoBehaviour
     public int wool { get; set; }
     public int iron { get; set; }
     public int rope { get; set; }
+    public int leaf { get; set; }
 
     public static ResourceBank Instance { get; private set; }
     private void Awake()
