@@ -13,16 +13,10 @@ MonoBehaviour:
   m_Name: WoodUPG
   m_EditorClassIdentifier: 
   Title: WoodUpg
-  description: 
+  description: "\u0423\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435 \u043F\u0435\u0440\u0432\u043E\u0433\u043E "
   rockCost: 0
   woodCost: 5
   woolCost: 0
   ironCost: 0
   RopeCost: 0
   LeafCost: 0
-  WoodproductivityIncrease: 9
-  WoolproductivityIncrease: 0
-  IronproductivityIncrease: 0
-  RockproductivityIncrease: 0
-  Leafprod: 0
-  ropeprod: 0

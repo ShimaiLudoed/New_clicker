@@ -12,9 +12,6 @@ public class Click : MonoBehaviour
     public int IronClick = 1;
     public int LeafClick = 1;
     public int ropeclick = 1;
-
-
-
     public void AddIron()
     {
         ResourceBank.Instance.iron += IronClick += Upgrade.Instance.IronproductivityIncrease;
@@ -23,7 +20,6 @@ public class Click : MonoBehaviour
     {
         ResourceBank.Instance.leaf += LeafClick += Upgrade.Instance.Leafprod;
     }
-
     public void AddWool()
     {
         ResourceBank.Instance.wool += WoolClick+= Upgrade.Instance.WoolproductivityIncrease;

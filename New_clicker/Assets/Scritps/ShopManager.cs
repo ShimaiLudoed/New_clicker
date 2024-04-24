@@ -14,11 +14,10 @@ public class ShopManager : MonoBehaviour
     public TMP_Text LeafUI;
     public TMP_Text RopeUI;
     public ShopItem[] shopItems;
-    //public GameObject[] shopPanelsGO;
     public ShopTemplate[] shopPanels;
     public Button[] Mypurch;
     public Click click;
-    
+    public ShipUPG ShipUpg;
     void Start()
     {
         for (int i = 0; i < shopItems.Length; i++)
@@ -36,9 +35,6 @@ public class ShopManager : MonoBehaviour
         loadpanels();
         CheckPurchare();
     }
-
-   
-
     public void CheckPurchare()
     {
        for(int i = 0;i<shopItems.Length;i++)
@@ -54,7 +50,6 @@ public class ShopManager : MonoBehaviour
             }
         }
     }
-
     public void PurchItem(int btnNO)
     {
         if (ResourceBank.Instance.rock >= shopItems[btnNO].rockCost & ResourceBank.Instance.wood >= shopItems[btnNO].woodCost & ResourceBank.Instance.wool>= shopItems[btnNO].woolCost & ResourceBank.Instance.iron>=shopItems[btnNO].ironCost & ResourceBank.Instance.leaf>=shopItems[btnNO].LeafCost & ResourceBank.Instance.rope>=shopItems[btnNO].RopeCost)
@@ -69,19 +64,28 @@ public class ShopManager : MonoBehaviour
             if (shopItems[btnNO].Title == "WoodUpg")
             {
                 Upgrade.Instance.WoodproductivityIncrease++;
+                shopItems[btnNO].woodCost *=2;
+               
             }
             if (shopItems[btnNO].Title == "rockUPG")
-
             {
                 Upgrade.Instance.RockproductivityIncrease++;
+                shopItems[btnNO].rockCost *=2;
             }
             if (shopItems[btnNO].Title == "IronUPG")
             {
                 Upgrade.Instance.IronproductivityIncrease++;
+                shopItems[btnNO].ironCost *=2;
             }
             if (shopItems[btnNO].Title=="WoolUPG")
             {
                 Upgrade.Instance.WoolproductivityIncrease++;
+                shopItems[btnNO].woolCost *=2;
+            }
+            if (shopItems[btnNO].Title=="LeafUPG")
+            {
+                Upgrade.Instance.Leafprod++;
+                shopItems[btnNO].LeafCost *=2;
             }
             
             WoolUI.text = "wools" + ResourceBank.Instance.wool.ToString();

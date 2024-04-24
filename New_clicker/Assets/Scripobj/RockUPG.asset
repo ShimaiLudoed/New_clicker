@@ -12,13 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4dd8d74480569f42ba64f1062806cbe, type: 3}
   m_Name: RockUPG
   m_EditorClassIdentifier: 
-  Title: 2
-  description: 2
-  rockCost: 0
+  Title: rockUPG
+  description: "\u0443\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435 2 "
+  rockCost: 10
   woodCost: 0
   woolCost: 0
   ironCost: 0
-  WoodproductivityIncrease: 0
-  WoolproductivityIncrease: 0
-  IronproductivityIncrease: 0
-  RockproductivityIncrease: 0
+  RopeCost: 0
+  LeafCost: 0
