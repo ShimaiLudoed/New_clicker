@@ -2,30 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Scene_Manager : MonoBehaviour
+public class SceneManager : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("G.M.Scene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("G.M.Scene");
     }
-    public void WoodTP()
+    public void WoodTp()
     {
-        SceneManager.LoadScene("W.L");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("W.L");
     }
-    public void WoolTP()
+    public void WoolTp()
     {
-        SceneManager.LoadScene("S.L");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("S.L");
     }
-    public void IronTP()
+    public void IronTp()
     {
-        SceneManager.LoadScene("I.L");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("I.L");
     }
-    public void RockTP()
+    public void RockTp()
     {
-        SceneManager.LoadScene("R.L");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("R.L");
     }
-    public void LeafTP()
+    public void LeafTp()
     {
-        SceneManager.LoadScene("L.L");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("L.L");
     }
 }

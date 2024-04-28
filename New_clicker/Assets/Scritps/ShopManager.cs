@@ -3,21 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
-    public TMP_Text IronUI;
-    public TMP_Text WoolUI;
-    public TMP_Text WoodUI;
-    public TMP_Text RockUI;
-    public TMP_Text LeafUI;
-    public TMP_Text RopeUI;
+    [FormerlySerializedAs("IronUI")] public TMP_Text ironUI;
+    [FormerlySerializedAs("WoolUI")] public TMP_Text woolUI;
+    [FormerlySerializedAs("WoodUI")] public TMP_Text woodUI;
+    [FormerlySerializedAs("RockUI")] public TMP_Text rockUI;
+    [FormerlySerializedAs("LeafUI")] public TMP_Text leafUI;
+    [FormerlySerializedAs("RopeUI")] public TMP_Text ropeUI;
     public ShopItem[] shopItems;
     public ShopTemplate[] shopPanels;
-    public Button[] Mypurch;
+    [FormerlySerializedAs("Mypurch")] public Button[] mypurch;
     public Click click;
-    public ShipUPG ShipUpg;
+    [FormerlySerializedAs("ShipUpg")] public ShipUpg shipUpg;
     void Start()
     {
         for (int i = 0; i < shopItems.Length; i++)
@@ -25,14 +26,14 @@ public class ShopManager : MonoBehaviour
             shopPanels[i].gameObject.SetActive(true);
         }
 
-        RopeUI.text = "ropes" + ResourceBank.Instance.rope.ToString();
-        LeafUI.text = "leafs" + ResourceBank.Instance.leaf.ToString();
-        WoodUI.text = "woods" + ResourceBank.Instance.wood.ToString();
-        RockUI.text = "rocks" + ResourceBank.Instance.rock.ToString();
-        WoolUI.text = "wools" + ResourceBank.Instance.wool.ToString();
-        IronUI.text = "irons" + ResourceBank.Instance.iron.ToString();
+        ropeUI.text = "ropes" + ResourceBank.Instance.Rope.ToString();
+        leafUI.text = "leafs" + ResourceBank.Instance.Leaf.ToString();
+        woodUI.text = "woods" + ResourceBank.Instance.Wood.ToString();
+        rockUI.text = "rocks" + ResourceBank.Instance.Rock.ToString();
+        woolUI.text = "wools" + ResourceBank.Instance.Wool.ToString();
+        ironUI.text = "irons" + ResourceBank.Instance.Iron.ToString();
         
-        loadpanels();
+        Loadpanels();
         CheckPurchare();
     }
     public void CheckPurchare()
@@ -40,85 +41,85 @@ public class ShopManager : MonoBehaviour
        for(int i = 0;i<shopItems.Length;i++)
         {
             
-            if (ResourceBank.Instance.rock >= shopItems[i].rockCost& ResourceBank.Instance.wood >= shopItems[i].woodCost & ResourceBank.Instance.wool>= shopItems[i].woolCost & ResourceBank.Instance.iron>=shopItems[i].ironCost & ResourceBank.Instance.leaf>=shopItems[i].LeafCost & ResourceBank.Instance.rope>=shopItems[i].RopeCost)
+            if (ResourceBank.Instance.Rock >= shopItems[i].rockCost& ResourceBank.Instance.Wood >= shopItems[i].woodCost & ResourceBank.Instance.Wool>= shopItems[i].woolCost & ResourceBank.Instance.Iron>=shopItems[i].ironCost & ResourceBank.Instance.Leaf>=shopItems[i].leafCost & ResourceBank.Instance.Rope>=shopItems[i].ropeCost)
             {
-                Mypurch[i].interactable = true;
+                mypurch[i].interactable = true;
             }
             else
             {
-                Mypurch[i].interactable = false;
+                mypurch[i].interactable = false;
             }
         }
     }
-    public void PurchItem(int btnNO)
+    public void PurchItem(int btnNo)
     {
-        if (ResourceBank.Instance.rock >= shopItems[btnNO].rockCost & ResourceBank.Instance.wood >= shopItems[btnNO].woodCost & ResourceBank.Instance.wool>= shopItems[btnNO].woolCost & ResourceBank.Instance.iron>=shopItems[btnNO].ironCost & ResourceBank.Instance.leaf>=shopItems[btnNO].LeafCost & ResourceBank.Instance.rope>=shopItems[btnNO].RopeCost)
+        if (ResourceBank.Instance.Rock >= shopItems[btnNo].rockCost & ResourceBank.Instance.Wood >= shopItems[btnNo].woodCost & ResourceBank.Instance.Wool>= shopItems[btnNo].woolCost & ResourceBank.Instance.Iron>=shopItems[btnNo].ironCost & ResourceBank.Instance.Leaf>=shopItems[btnNo].leafCost & ResourceBank.Instance.Rope>=shopItems[btnNo].ropeCost)
         {
-            ResourceBank.Instance.iron -= shopItems[btnNO].ironCost;
-            ResourceBank.Instance.wool -= shopItems[btnNO].woolCost;
-            ResourceBank.Instance.wood -= shopItems[btnNO].woodCost;
-            ResourceBank.Instance.rock -= shopItems[btnNO].rockCost;
-            ResourceBank.Instance.leaf -= shopItems[btnNO].LeafCost;
-            ResourceBank.Instance.rope -= shopItems[btnNO].RopeCost;
+            ResourceBank.Instance.Iron -= shopItems[btnNo].ironCost;
+            ResourceBank.Instance.Wool -= shopItems[btnNo].woolCost;
+            ResourceBank.Instance.Wood -= shopItems[btnNo].woodCost;
+            ResourceBank.Instance.Rock -= shopItems[btnNo].rockCost;
+            ResourceBank.Instance.Leaf -= shopItems[btnNo].leafCost;
+            ResourceBank.Instance.Rope -= shopItems[btnNo].ropeCost;
             
-            if (shopItems[btnNO].Title == "WoodUpg")
+            if (shopItems[btnNo].title == "WoodUpg")
             {
                 Upgrade.Instance.WoodproductivityIncrease++;
-                shopItems[btnNO].woodCost *=2;
+                shopItems[btnNo].woodCost *=2;
                
             }
-            if (shopItems[btnNO].Title == "rockUPG")
+            if (shopItems[btnNo].title == "rockUPG")
             {
                 Upgrade.Instance.RockproductivityIncrease++;
-                shopItems[btnNO].rockCost *=2;
+                shopItems[btnNo].rockCost *=2;
             }
-            if (shopItems[btnNO].Title == "IronUPG")
+            if (shopItems[btnNo].title == "IronUPG")
             {
                 Upgrade.Instance.IronproductivityIncrease++;
-                shopItems[btnNO].ironCost *=2;
+                shopItems[btnNo].ironCost *=2;
             }
-            if (shopItems[btnNO].Title=="WoolUPG")
+            if (shopItems[btnNo].title=="WoolUPG")
             {
                 Upgrade.Instance.WoolproductivityIncrease++;
-                shopItems[btnNO].woolCost *=2;
+                shopItems[btnNo].woolCost *=2;
             }
-            if (shopItems[btnNO].Title=="LeafUPG")
+            if (shopItems[btnNo].title=="LeafUPG")
             {
                 Upgrade.Instance.Leafprod++;
-                shopItems[btnNO].LeafCost *=2;
+                shopItems[btnNo].leafCost *=2;
             }
             
-            WoolUI.text = "wools" + ResourceBank.Instance.wool.ToString();
-            IronUI.text = "irons" + ResourceBank.Instance.iron.ToString();
-            WoodUI.text = "woods" + ResourceBank.Instance.wood.ToString();
-            RockUI.text = "rocks" + ResourceBank.Instance.rock.ToString();
-            LeafUI.text = "leafs" + ResourceBank.Instance.leaf.ToString();
-            RopeUI.text = "ropes" + ResourceBank.Instance.rope.ToString();
+            woolUI.text = "wools" + ResourceBank.Instance.Wool.ToString();
+            ironUI.text = "irons" + ResourceBank.Instance.Iron.ToString();
+            woodUI.text = "woods" + ResourceBank.Instance.Wood.ToString();
+            rockUI.text = "rocks" + ResourceBank.Instance.Rock.ToString();
+            leafUI.text = "leafs" + ResourceBank.Instance.Leaf.ToString();
+            ropeUI.text = "ropes" + ResourceBank.Instance.Rope.ToString();
             CheckPurchare();
         }
     }
     void Update()
     {
-        RopeUI.text = "ropes" + ResourceBank.Instance.rope.ToString();
-        LeafUI.text = "leafs" + ResourceBank.Instance.leaf.ToString();
-        RockUI.text = "rocks" + ResourceBank.Instance.rock.ToString();
-        WoolUI.text = "wools" + ResourceBank.Instance.wool.ToString();
-        WoodUI.text = "woods" + ResourceBank.Instance.wood.ToString();
-        IronUI.text = "irons" + ResourceBank.Instance.iron.ToString();
+        ropeUI.text = "ropes" + ResourceBank.Instance.Rope.ToString();
+        leafUI.text = "leafs" + ResourceBank.Instance.Leaf.ToString();
+        rockUI.text = "rocks" + ResourceBank.Instance.Rock.ToString();
+        woolUI.text = "wools" + ResourceBank.Instance.Wool.ToString();
+        woodUI.text = "woods" + ResourceBank.Instance.Wood.ToString();
+        ironUI.text = "irons" + ResourceBank.Instance.Iron.ToString();
         CheckPurchare();
     }
-    public void loadpanels ()
+    public void Loadpanels ()
     {
         for (int i = 0; i < shopItems.Length; i++)
         {
-            shopPanels[i].titleText.text = shopItems[i].Title;
-            shopPanels[i].DescriptionTXT.text = shopItems[i].description;
+            shopPanels[i].titleText.text = shopItems[i].title;
+            shopPanels[i].descriptionTxt.text = shopItems[i].description;
             shopPanels[i].rockTxt.text = "rocks" + shopItems[i].rockCost.ToString();
             shopPanels[i].woodTxt.text = "woods" + shopItems[i].woodCost.ToString();
             shopPanels[i].ironTxt.text = "irons" + shopItems[i].ironCost.ToString();
             shopPanels[i].woolTxt.text = "wools" + shopItems[i].woolCost.ToString();
-            shopPanels[i].leafTxt.text = "leafs" + shopItems[i].LeafCost.ToString();
-            shopPanels[i].ropeTxt.text = "ropes" + shopItems[i].RopeCost.ToString();
+            shopPanels[i].leafTxt.text = "leafs" + shopItems[i].leafCost.ToString();
+            shopPanels[i].ropeTxt.text = "ropes" + shopItems[i].ropeCost.ToString();
         }
     }
 }

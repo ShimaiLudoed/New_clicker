@@ -8,13 +8,13 @@ using UnityEngine.Serialization;
 public class ShopItem : ScriptableObject
 {
     
- public string Title;
+ [FormerlySerializedAs("Title")] public string title;
  public string description; 
  public int rockCost; 
  public int woodCost;
  public int woolCost;
  public int ironCost;
- public int RopeCost;
- public int LeafCost;
+ [FormerlySerializedAs("RopeCost")] public int ropeCost;
+ [FormerlySerializedAs("LeafCost")] public int leafCost;
 
 }

@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 public class ShopTemplate : MonoBehaviour
 {
     public TMP_Text titleText;
-    public TMP_Text DescriptionTXT;
+    [FormerlySerializedAs("DescriptionTXT")] public TMP_Text descriptionTxt;
     public TMP_Text rockTxt;
     public TMP_Text woodTxt;
     public TMP_Text woolTxt;

@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class ShipUPG : MonoBehaviour
+public class ShipUpg : MonoBehaviour
 {
-    public Sprite EndShipSpire;
+    [FormerlySerializedAs("EndShipSpire")] public Sprite endShipSpire;
     public Sprite upgradedShipSprite; 
     public void ApplyUpgrade()
     {
         GetComponent<SpriteRenderer>().sprite = upgradedShipSprite;
     }
 
-    public void endGame()
+    public void EndGame()
     {
-        GetComponent<SpriteRenderer>().sprite = EndShipSpire;
+        GetComponent<SpriteRenderer>().sprite = endShipSpire;
     }
 }

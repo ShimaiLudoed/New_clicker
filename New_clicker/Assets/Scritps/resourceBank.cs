@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class ResourceBank : MonoBehaviour
 {
-    public int rock { get; set; } 
-    public int wood { get; set; }
-    public int wool { get; set; }
-    public int iron { get; set; }
-    public int rope { get; set; }
-    public int leaf { get; set; }
+    public int Rock { get; set; } 
+    public int Wood { get; set; }
+    public int Wool { get; set; }
+    public int Iron { get; set; }
+    public int Rope { get; set; }
+    public int Leaf { get; set; }
 
     public static ResourceBank Instance { get; private set; }
     private void Awake()

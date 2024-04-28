@@ -2,36 +2,37 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Click : MonoBehaviour
 {
 
-    public int Woodclick = 1;
-    public int RockClick = 1;
-    public int WoolClick = 1;
-    public int IronClick = 1;
-    public int LeafClick = 1;
+    [FormerlySerializedAs("Woodclick")] public int woodclick = 1;
+    [FormerlySerializedAs("RockClick")] public int rockClick = 1;
+    [FormerlySerializedAs("WoolClick")] public int woolClick = 1;
+    [FormerlySerializedAs("IronClick")] public int ironClick = 1;
+    [FormerlySerializedAs("LeafClick")] public int leafClick = 1;
     public int ropeclick = 1;
     public void AddIron()
     {
-        ResourceBank.Instance.iron += IronClick += Upgrade.Instance.IronproductivityIncrease;
+        ResourceBank.Instance.Iron += ironClick += Upgrade.Instance.IronproductivityIncrease;
     }
     public void AddLeaf()
     {
-        ResourceBank.Instance.leaf += LeafClick += Upgrade.Instance.Leafprod;
+        ResourceBank.Instance.Leaf += leafClick += Upgrade.Instance.Leafprod;
     }
     public void AddWool()
     {
-        ResourceBank.Instance.wool += WoolClick+= Upgrade.Instance.WoolproductivityIncrease;
+        ResourceBank.Instance.Wool += woolClick+= Upgrade.Instance.WoolproductivityIncrease;
     }
 
     public void AddRock()
     {
-        ResourceBank.Instance.rock+=RockClick += Upgrade.Instance.RockproductivityIncrease;
+        ResourceBank.Instance.Rock+=rockClick += Upgrade.Instance.RockproductivityIncrease;
     }
 
     public void AddWood()
     {
-        ResourceBank.Instance.wood+=Woodclick+=Upgrade.Instance.WoodproductivityIncrease;
+        ResourceBank.Instance.Wood+=woodclick+=Upgrade.Instance.WoodproductivityIncrease;
     }
 }

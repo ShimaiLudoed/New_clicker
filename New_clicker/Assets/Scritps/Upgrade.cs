@@ -9,7 +9,7 @@ public class Upgrade : MonoBehaviour
     public int IronproductivityIncrease { get; set; }
     public int RockproductivityIncrease { get; set; }
     public int Leafprod { get; set; }
-    public int ropeprod { get; set; }
+    public int Ropeprod { get; set; }
     
     public static Upgrade Instance { get; private set; }
     
