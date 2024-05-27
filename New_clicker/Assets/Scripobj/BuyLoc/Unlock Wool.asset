@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4dd8d74480569f42ba64f1062806cbe, type: 3}
   m_Name: Unlock Wool
   m_EditorClassIdentifier: 
-  title: Buy Rock Location
+  title: Buy Wool Location
   description: 
-  rockCost: 0
-  woodCost: 2
+  rockCost: 20
+  woodCost: 20
   woolCost: 0
-  ironCost: 0
-  ropeCost: 0
+  ironCost: 20
+  ropeCost: 20
   leafCost: 0

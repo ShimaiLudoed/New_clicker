@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4dd8d74480569f42ba64f1062806cbe, type: 3}
   m_Name: Unlock Iron
   m_EditorClassIdentifier: 
-  title: Buy Rock Location
+  title: Buy Iron Location
   description: 
-  rockCost: 0
-  woodCost: 2
+  rockCost: 20
+  woodCost: 20
   woolCost: 0
   ironCost: 0
   ropeCost: 0

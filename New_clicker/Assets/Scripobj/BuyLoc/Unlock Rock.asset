@@ -15,7 +15,7 @@ MonoBehaviour:
   title: Buy Rock Location
   description: 
   rockCost: 0
-  woodCost: 2
+  woodCost: 20
   woolCost: 0
   ironCost: 0
   ropeCost: 0

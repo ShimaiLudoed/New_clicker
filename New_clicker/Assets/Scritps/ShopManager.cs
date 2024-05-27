@@ -23,9 +23,9 @@ public class ShopManager : MonoBehaviour
     public ShopItem[] shopItems;
     public ShopTemplate[] shopPanels;
     public GameObject player;
-    
-    [FormerlySerializedAs("Mypurch")] public Button[] mypurch;
-    [FormerlySerializedAs("ShipUpg")] public ShipUpg shipUpg;
+    private Animator characterAnimator;
+    public Button[] mypurch;
+    public ShipUpg shipUpg;
     void Start()
     {
         for (int i = 0; i < shopItems.Length; i++)
@@ -61,6 +61,11 @@ public class ShopManager : MonoBehaviour
             UnlockwoolTP.SetActive(true);
         }
         
+        characterAnimator = player.GetComponent<Animator>();
+        if (characterAnimator == null)
+        {
+            Debug.LogError("Animator component not found on the player!");
+        }
         
     }
     public void CheckPurchare()
@@ -182,14 +187,12 @@ public class ShopManager : MonoBehaviour
     }
     public void PlayPurchaseAnimation()
     {
-        Animator characterAnimator = player.GetComponent<Animator>();
-        if (characterAnimator != null)
-        {
-            characterAnimator.Play("Buy");
-        }
-        else
-        {
-            Debug.LogError("Animator component not found on the character model or its children!");
-        }
+        characterAnimator.SetBool("isPurchasing", true);
+    }
+    
+    IEnumerator ResetPurchaseAnimation(float time)
+    {
+        yield return new WaitForSeconds(2); // Ждем определенное время
+        characterAnimator.SetBool("isPurchasing", false);
     }
 }

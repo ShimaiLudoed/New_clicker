@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4dd8d74480569f42ba64f1062806cbe, type: 3}
   m_Name: ironlvl 1
   m_EditorClassIdentifier: 
-  title: 
+  title: 'Iron Lvl 1 '
   description: 
   rockCost: 0
   woodCost: 0
   woolCost: 0
-  ironCost: 0
+  ironCost: 50
   ropeCost: 0
   leafCost: 0
