@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -61,6 +62,12 @@ public class ShopManager : MonoBehaviour
             ResourceBank.Instance.Rock -= shopItems[btnNo].rockCost;
             ResourceBank.Instance.Leaf -= shopItems[btnNo].leafCost;
             ResourceBank.Instance.Rope -= shopItems[btnNo].ropeCost;
+
+            if (shopItems[btnNo].title == "ShipUPG")
+            {
+                shipUpg.ApplyUpgrade();
+                HidePurchasedItem(btnNo);
+            }
             
             if (shopItems[btnNo].title == "WoodUpg")
             {
@@ -121,5 +128,9 @@ public class ShopManager : MonoBehaviour
             shopPanels[i].leafTxt.text = "leafs" + shopItems[i].leafCost.ToString();
             shopPanels[i].ropeTxt.text = "ropes" + shopItems[i].ropeCost.ToString();
         }
+    }
+    public void HidePurchasedItem(int index)
+    {
+        shopPanels[index].gameObject.SetActive(false); 
     }
 }
