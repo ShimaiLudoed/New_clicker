@@ -4,29 +4,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class SceneChangeHandler : MonoBehaviour
+public class animCont : MonoBehaviour
 {
-    public Animator animator;
-    private string currentScene;
-
-    void Start()
+    [FormerlySerializedAs("Player")] public GameObject player;
+    
+    public void PlayPurchaseAnimation()
     {
-        currentScene = gameObject.scene.name;
-    }
-
-    void Update()
-    {
-        string newScene = gameObject.scene.name;
-        if (newScene != currentScene)
+        Animator characterAnimator = player.GetComponentInChildren<Animator>();
+        if (characterAnimator != null)
         {
-            if (newScene == "W.L")
-            {
-                animator.SetTrigger("cut");
-                // Добавьте другие условия для других сцен
-            }
-
-            currentScene = newScene;
+            characterAnimator.Play("Buy");
+        }
+        else
+        {
+            Debug.LogError("Animator component not found on the character model or its children!");
         }
     }
 }

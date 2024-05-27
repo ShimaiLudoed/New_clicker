@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4dd8d74480569f42ba64f1062806cbe, type: 3}
-  m_Name: ShipBuild
+  m_Name: WoodLvl1
   m_EditorClassIdentifier: 
-  title: BuildShip
-  description: 
-  rockCost: 0
-  woodCost: 0
-  woolCost: 0
-  ironCost: 0
-  ropeCost: 0
-  leafCost: 0
+  title: Wood 1 lvl
+  description: "\u0423\u043B\u0443\u0447\u0448\u0430\u0435\u0442 \u0432\u0430\u0448\u0443
+    \u0434\u043E\u0431\u044B\u0447\u0443 \u0434\u0435\u0440\u0435\u0432\u0430"
+  rockCost: 5
+  woodCost: 10
+  woolCost: 5
+  ironCost: 5
+  ropeCost: 5
+  leafCost: 5

@@ -6,7 +6,14 @@ using UnityEngine.Serialization;
 public class ShipUpg : MonoBehaviour
 {
     [FormerlySerializedAs("EndShipSpire")] public Sprite endShipSpire;
-    public Sprite upgradedShipSprite; 
+    public Sprite upgradedShipSprite;
+    public Sprite BuildShip;
+
+    public void buildShip()
+    {
+        GetComponent<SpriteRenderer>().sprite = BuildShip;
+    }
+    
     public void ApplyUpgrade()
     {
         GetComponent<SpriteRenderer>().sprite = upgradedShipSprite;

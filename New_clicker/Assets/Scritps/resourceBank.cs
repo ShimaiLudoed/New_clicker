@@ -23,4 +23,8 @@ public class ResourceBank : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(target:this);
     }
+    public bool isRockLocationUnlocked;
+    public bool isIronLocationUnlocked;
+    public bool isLeafLocationUnlocked;
+    public bool isWoolLocationUnlocked;
 }
