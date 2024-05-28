@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -15,17 +14,30 @@ public class ShopManager : MonoBehaviour
     [FormerlySerializedAs("RockUI")] public TMP_Text rockUI;
     [FormerlySerializedAs("LeafUI")] public TMP_Text leafUI;
     [FormerlySerializedAs("RopeUI")] public TMP_Text ropeUI;
-    public GameObject UnlockRockTP;
-    public GameObject UnlockIronTP;
-    public GameObject UnlockLeafTP;
-    public GameObject Rope;
-    public GameObject UnlockwoolTP;
+    [FormerlySerializedAs("UnlockRockTP")] public GameObject unlockRockTp;
+    [FormerlySerializedAs("UnlockIronTP")] public GameObject unlockIronTp;
+    [FormerlySerializedAs("UnlockLeafTP")] public GameObject unlockLeafTp;
+    [FormerlySerializedAs("Rope")] public GameObject rope;
+    [FormerlySerializedAs("UnlockwoolTP")] public GameObject unlockwoolTp;
     public ShopItem[] shopItems;
     public ShopTemplate[] shopPanels;
     public GameObject player;
-    private Animator characterAnimator;
+    private Animator _characterAnimator;
     public Button[] mypurch;
     public ShipUpg shipUpg;
+    [FormerlySerializedAs("RockUi")] public GameObject rockUi;
+    [FormerlySerializedAs("LeafUi")] public GameObject leafUi;
+    [FormerlySerializedAs("RopeUi")] public GameObject ropeUi;
+    [FormerlySerializedAs("IronUi")] public GameObject ironUi;
+    [FormerlySerializedAs("WoolUi")] public GameObject woolUi;
+    private TutorMage _tutor;
+    [FormerlySerializedAs("Infopan")] public GameObject infopan;
+
+    public ShopManager(GameObject unlockIronTp)
+    {
+        this.unlockIronTp = unlockIronTp;
+    }
+
     void Start()
     {
         for (int i = 0; i < shopItems.Length; i++)
@@ -45,24 +57,30 @@ public class ShopManager : MonoBehaviour
         
         if (ResourceBank.Instance.isRockLocationUnlocked)
         {
-            UnlockRockTP.SetActive(true);
+            unlockRockTp.SetActive(true);
+            rockUi.SetActive(true);
+            
         }
         if (ResourceBank.Instance.isLeafLocationUnlocked)
         {
-            UnlockLeafTP.SetActive(true);
-            Rope.SetActive(true);
+            unlockLeafTp.SetActive(true);
+            rope.SetActive(true);
+            leafUi.SetActive(true);
+            ropeUi.SetActive(true);
         }
         if (ResourceBank.Instance.isIronLocationUnlocked)
         {
-            UnlockIronTP.SetActive(true);
+            unlockIronTp.SetActive(true);
+            ironUi.SetActive(true);
         }
         if (ResourceBank.Instance.isWoolLocationUnlocked)
         {
-            UnlockwoolTP.SetActive(true);
+            unlockwoolTp.SetActive(true);
+            woolUi.SetActive(true);
         }
         
-        characterAnimator = player.GetComponent<Animator>();
-        if (characterAnimator == null)
+        _characterAnimator = player.GetComponent<Animator>();
+        if (_characterAnimator == null)
         {
             Debug.LogError("Animator component not found on the player!");
         }
@@ -71,17 +89,17 @@ public class ShopManager : MonoBehaviour
     public void CheckPurchare()
     {
        for(int i = 0;i<shopItems.Length;i++)
-        {
+       {
             
-            if (ResourceBank.Instance.Rock >= shopItems[i].rockCost& ResourceBank.Instance.Wood >= shopItems[i].woodCost & ResourceBank.Instance.Wool>= shopItems[i].woolCost & ResourceBank.Instance.Iron>=shopItems[i].ironCost & ResourceBank.Instance.Leaf>=shopItems[i].leafCost & ResourceBank.Instance.Rope>=shopItems[i].ropeCost)
-            {
-                mypurch[i].interactable = true;
-            }
-            else
-            {
-                mypurch[i].interactable = false;
-            }
-        }
+           if (ResourceBank.Instance.Rock >= shopItems[i].rockCost& ResourceBank.Instance.Wood >= shopItems[i].woodCost & ResourceBank.Instance.Wool>= shopItems[i].woolCost & ResourceBank.Instance.Iron>=shopItems[i].ironCost & ResourceBank.Instance.Leaf>=shopItems[i].leafCost & ResourceBank.Instance.Rope>=shopItems[i].ropeCost)
+           {
+               mypurch[i].interactable = true;
+           }
+           else
+           {
+               mypurch[i].interactable = false;
+           }
+       }
     }
     public void PurchItem(int btnNo)
     {
@@ -100,13 +118,13 @@ public class ShopManager : MonoBehaviour
                 HidePurchasedItem(btnNo);
             }
             
-            if (shopItems[btnNo].title == "UpgradeShip")
+            if (shopItems[btnNo].title == "UpgShip")
             {
                 shipUpg.ApplyUpgrade();
                 HidePurchasedItem(btnNo);
             }
             
-            if (shopItems[btnNo].title == "UpgradeShip")
+            if (shopItems[btnNo].title == "EndGame")
             {
                 shipUpg.EndGame();
                 HidePurchasedItem(btnNo);
@@ -115,29 +133,34 @@ public class ShopManager : MonoBehaviour
             if (shopItems[btnNo].title == "Buy Rock Location")
             {
                 ResourceBank.Instance.isRockLocationUnlocked = true;
-                UnlockRockTP.SetActive(true);
+                unlockRockTp.SetActive(true);
                 HidePurchasedItem(btnNo);
-                PlayPurchaseAnimation();
+                rockUi.SetActive(true);
+                TutorCon.Instance.InfoPan5 = false;
+                infopan.SetActive(false);
             }
             
             if (shopItems[btnNo].title == "Buy Iron Location")
             {
-                UnlockIronTP.SetActive(true);
+                unlockIronTp.SetActive(true);
                 ResourceBank.Instance.isIronLocationUnlocked = true;
                 HidePurchasedItem(btnNo);
+                ironUi.SetActive(true);
             }
             if (shopItems[btnNo].title == "Buy Leaf Location")
             {
                 ResourceBank.Instance.isLeafLocationUnlocked = true;
-                UnlockLeafTP.SetActive(true);
-                Rope.SetActive(true);
+                unlockLeafTp.SetActive(true);
+                rope.SetActive(true);
                 HidePurchasedItem(btnNo);
+                leafUi.SetActive(true);
             }
             if (shopItems[btnNo].title == "Buy Wool Location")
             {
                 ResourceBank.Instance.isWoolLocationUnlocked = true;
-                UnlockwoolTP.SetActive(true);
+                unlockwoolTp.SetActive(true);
                 HidePurchasedItem(btnNo);
+                woolUi.SetActive(true);
             }
             
             if (shopItems[btnNo].title == "WoodUpg")
@@ -184,15 +207,5 @@ public class ShopManager : MonoBehaviour
     public void HidePurchasedItem(int index)
     {
         shopPanels[index].gameObject.SetActive(false); 
-    }
-    public void PlayPurchaseAnimation()
-    {
-        characterAnimator.SetBool("isPurchasing", true);
-    }
-    
-    IEnumerator ResetPurchaseAnimation(float time)
-    {
-        yield return new WaitForSeconds(2); // Ждем определенное время
-        characterAnimator.SetBool("isPurchasing", false);
     }
 }

@@ -27,4 +27,6 @@ public class ResourceBank : MonoBehaviour
     public bool isIronLocationUnlocked;
     public bool isLeafLocationUnlocked;
     public bool isWoolLocationUnlocked;
+   
+    
 }

@@ -7,7 +7,29 @@
     <list default="true" id="95293659-0e66-44c1-b08c-a40eae539d75" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.New_clicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.New_clicker/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/G.M.Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/G.M.Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/M.M.Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/M.M.Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/I.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/I.L.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/L.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/L.L.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/R.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/R.L.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/S.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/S.L.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/W.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/W.L.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/BuyLoc/Unlock Rock.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/BuyLoc/Unlock Rock.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/EndGame.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/EndGame.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/ShipUpgrade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/ShipUpgrade.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/Scene_Manager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/Scene_Manager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/ShipUPG.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/ShipUPG.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/ShopItemSO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/ShopItemSO.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/ShopManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/ShopManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/ShopTemplate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/ShopTemplate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/Upgrade.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/Upgrade.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scritps/resourceBank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/resourceBank.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +43,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scritps/Click.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scritps/Scene_Manager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scritps/ShipUPG.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scritps/Tutor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scritps/Upgrade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scritps/resourceBank.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -56,6 +79,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Build\New_clicker.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Athlon\Documents\GitHub\New_clicker\New_clicker\Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Unity\2022.3.14f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\admin\GitHub\New_clicker\New_clicker -debugCodeOptimization" />
@@ -120,6 +151,8 @@
       <workItem from="1715370408223" duration="788000" />
       <workItem from="1716755089276" duration="704000" />
       <workItem from="1716798318620" duration="160000" />
+      <workItem from="1716833849264" duration="3567000" />
+      <workItem from="1716891153493" duration="1554000" />
     </task>
     <servers />
   </component>
