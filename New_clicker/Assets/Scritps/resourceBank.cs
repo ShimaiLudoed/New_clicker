@@ -2,17 +2,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ResourceBank : MonoBehaviour
 {
-    public int Rock { get; set; } 
-    public int Wood { get; set; }
-    public int Wool { get; set; }
-    public int Iron { get; set; }
-    public int Rope { get; set; }
-    public int Leaf { get; set; }
+    public int Rock;
+    public int Wood;
+    public int Wool;
+    public int Iron;
+    public int Rope;
+    public int Leaf;
 
-    public static ResourceBank Instance { get; private set; }
+
+public static ResourceBank Instance { get; private set; }
     private void Awake()
     {
         if (Instance != null)
@@ -27,6 +29,8 @@ public class ResourceBank : MonoBehaviour
     public bool isIronLocationUnlocked;
     public bool isLeafLocationUnlocked;
     public bool isWoolLocationUnlocked;
-   
-    
+    [FormerlySerializedAs("EndGameIsUnl")] public bool endGameIsUnl;
+
+
+
 }

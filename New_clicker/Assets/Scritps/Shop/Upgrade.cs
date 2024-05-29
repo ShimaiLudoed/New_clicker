@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Upgrade : MonoBehaviour
 {
-    public int WoodproductivityIncrease { get; set; }
-    public int WoolproductivityIncrease { get; set; }
-    public int IronproductivityIncrease { get; set; }
-    public int RockproductivityIncrease { get; set; }
+    public int WoodproductivityIncrease = 1;
+    public int WoolproductivityIncrease = 1;
+    public int IronproductivityIncrease = 1;
+    public int RockproductivityIncrease = 1;
     public int Leafprod { get; set; }
-    public int Ropeprod { get; set; }
     
     public static Upgrade Instance { get; private set; }
     

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4dd8d74480569f42ba64f1062806cbe, type: 3}
   m_Name: Unlock Rock
   m_EditorClassIdentifier: 
-  title: Buy Rock Location
-  description: 
+  title: "\u041B\u043E\u043A\u0430\u0446\u0438\u044F \u0441 \u043A\u0430\u043C\u043D\u0435\u043C"
+  description: "\u0412\u044B \u0441\u043C\u043E\u0436\u0435\u0442\u0435 \u0434\u043E\u0431\u044B\u0432\u0430\u0442\u044C
+    \u043A\u0430\u043C\u0435\u043D\u044C"
   rockCost: 0
   woodCost: 1
   woolCost: 0

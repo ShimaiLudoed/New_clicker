@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,13 @@ public class SceneManager : MonoBehaviour
     public void PlayGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("G.M.Scene");
+      
     }
 
     public void WoodTp()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("W.L");
+ 
     }
 
     public void WoolTp()
@@ -37,6 +40,14 @@ public class SceneManager : MonoBehaviour
     public void End()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("End Game");
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("M.M.Scene");
+        }
     }
 }
 

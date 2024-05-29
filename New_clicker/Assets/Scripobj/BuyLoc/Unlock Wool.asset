@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4dd8d74480569f42ba64f1062806cbe, type: 3}
   m_Name: Unlock Wool
   m_EditorClassIdentifier: 
-  title: Buy Wool Location
-  description: 
+  title: "\u041B\u043E\u043A\u0430\u0446\u0438\u044F \u0441 \u043E\u0432\u0446\u0430\u043C\u0438"
+  description: "\u0412\u044B \u0441\u043C\u043E\u0436\u0435\u0442\u0435 \u0434\u043E\u0431\u044B\u0432\u0430\u0442\u044C
+    \u0448\u0435\u0440\u0441\u0442\u044C"
   rockCost: 20
   woodCost: 20
   woolCost: 0

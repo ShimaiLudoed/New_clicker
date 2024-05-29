@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: ShipBuild
   m_EditorClassIdentifier: 
   title: BuildShip
-  description: 
-  rockCost: 0
-  woodCost: 0
+  description: "\u0412\u044B \u043D\u0430\u0447\u043D\u0451\u0442\u0435 \u0441\u0442\u0440\u043E\u0439\u043A\u0443
+    \u043A\u043E\u0440\u0430\u0431\u043B\u044F"
+  rockCost: 25
+  woodCost: 100
   woolCost: 0
   ironCost: 0
   ropeCost: 0

@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
+
 public class ShopManager : MonoBehaviour
 {
     [FormerlySerializedAs("IronUI")] public TMP_Text ironUI;
@@ -19,6 +20,7 @@ public class ShopManager : MonoBehaviour
     [FormerlySerializedAs("UnlockLeafTP")] public GameObject unlockLeafTp;
     [FormerlySerializedAs("Rope")] public GameObject rope;
     [FormerlySerializedAs("UnlockwoolTP")] public GameObject unlockwoolTp;
+    public GameObject EndGameTP;
     public ShopItem[] shopItems;
     public ShopTemplate[] shopPanels;
     public GameObject player;
@@ -33,11 +35,7 @@ public class ShopManager : MonoBehaviour
     private TutorMage _tutor;
     [FormerlySerializedAs("Infopan")] public GameObject infopan;
 
-    public ShopManager(GameObject unlockIronTp)
-    {
-        this.unlockIronTp = unlockIronTp;
-    }
-
+    
     void Start()
     {
         for (int i = 0; i < shopItems.Length; i++)
@@ -54,6 +52,11 @@ public class ShopManager : MonoBehaviour
         
         Loadpanels();
         CheckPurchare();
+
+        if (ResourceBank.Instance.endGameIsUnl)
+        {
+            EndGameTP.SetActive(true);
+        }
         
         if (ResourceBank.Instance.isRockLocationUnlocked)
         {
@@ -85,6 +88,7 @@ public class ShopManager : MonoBehaviour
             Debug.LogError("Animator component not found on the player!");
         }
         
+
     }
     public void CheckPurchare()
     {
@@ -115,39 +119,41 @@ public class ShopManager : MonoBehaviour
             if (shopItems[btnNo].title == "BuildShip")
             {
                 shipUpg.buildShip();
-                HidePurchasedItem(btnNo);
+               HidePurchasedItem(btnNo);
             }
             
             if (shopItems[btnNo].title == "UpgShip")
             {
                 shipUpg.ApplyUpgrade();
-                HidePurchasedItem(btnNo);
+             HidePurchasedItem(btnNo);
             }
             
             if (shopItems[btnNo].title == "EndGame")
             {
                 shipUpg.EndGame();
                 HidePurchasedItem(btnNo);
+                ResourceBank.Instance.endGameIsUnl = true;
+                Start(); 
             }
 
-            if (shopItems[btnNo].title == "Buy Rock Location")
+            if (shopItems[btnNo].title == "Локация с камнем")
             {
                 ResourceBank.Instance.isRockLocationUnlocked = true;
-                unlockRockTp.SetActive(true);
+                unlockRockTp.SetActive(true); 
                 HidePurchasedItem(btnNo);
                 rockUi.SetActive(true);
                 TutorCon.Instance.InfoPan5 = false;
                 infopan.SetActive(false);
             }
             
-            if (shopItems[btnNo].title == "Buy Iron Location")
+            if (shopItems[btnNo].title == "Локация с железом")
             {
                 unlockIronTp.SetActive(true);
                 ResourceBank.Instance.isIronLocationUnlocked = true;
-                HidePurchasedItem(btnNo);
+              HidePurchasedItem(btnNo);
                 ironUi.SetActive(true);
             }
-            if (shopItems[btnNo].title == "Buy Leaf Location")
+            if (shopItems[btnNo].title == "Локация с растенями")
             {
                 ResourceBank.Instance.isLeafLocationUnlocked = true;
                 unlockLeafTp.SetActive(true);
@@ -155,7 +161,7 @@ public class ShopManager : MonoBehaviour
                 HidePurchasedItem(btnNo);
                 leafUi.SetActive(true);
             }
-            if (shopItems[btnNo].title == "Buy Wool Location")
+            if (shopItems[btnNo].title == "Локация с овцами")
             {
                 ResourceBank.Instance.isWoolLocationUnlocked = true;
                 unlockwoolTp.SetActive(true);
@@ -163,14 +169,137 @@ public class ShopManager : MonoBehaviour
                 woolUi.SetActive(true);
             }
             
-            if (shopItems[btnNo].title == "WoodUpg")
+            if (shopItems[btnNo].title == "Улучшение дерева")
             {
-                Upgrade.Instance.WoodproductivityIncrease++;
-                shopItems[btnNo].woodCost *=2;
-               
+                Upgrade.Instance.WoodproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
             }
-          
-            
+            if (shopItems[btnNo].title == "Улучшение дерева 2")
+            {
+                Upgrade.Instance.WoodproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение дерева 3")
+            {
+                Upgrade.Instance.WoodproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение дерева 4")
+            {
+                Upgrade.Instance.WoodproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение дерева 5")
+            {
+                Upgrade.Instance.WoodproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение железа ")
+            {
+                Upgrade.Instance.IronproductivityIncrease*=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение железа 2")
+            {
+                Upgrade.Instance.IronproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+
+            if (shopItems[btnNo].title == "Улучшение железа 3")
+            {
+                Upgrade.Instance.IronproductivityIncrease *= 2;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение железа 4")
+            {
+                Upgrade.Instance.IronproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение железа 5")
+            {
+                Upgrade.Instance.IronproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение растений")
+            {
+                Upgrade.Instance.Leafprod *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение растений 2")
+            {
+                Upgrade.Instance.Leafprod *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение растений 3")
+            {
+                Upgrade.Instance.Leafprod *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение растений 4")
+            {
+                Upgrade.Instance.Leafprod *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение растений 5")
+            {
+                Upgrade.Instance.Leafprod *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Верёвка")
+            {
+                ResourceBank.Instance.Rope++;
+            }
+            if (shopItems[btnNo].title == "Улучшение камня")
+            {
+                Upgrade.Instance.RockproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение камня 2")
+            {
+                Upgrade.Instance.RockproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение камня 3")
+            {
+                Upgrade.Instance.RockproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение камня 4")
+            {
+                Upgrade.Instance.RockproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение камня 5")
+            {
+                Upgrade.Instance.RockproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение шерсти")
+            {
+                Upgrade.Instance.WoolproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение шерсти 2")
+            {
+                Upgrade.Instance.WoolproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение шерсти 3")
+            {
+                Upgrade.Instance.WoolproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            } 
+            if (shopItems[btnNo].title == "Улучшение шерсти 4")
+            {
+                Upgrade.Instance.WoolproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+            if (shopItems[btnNo].title == "Улучшение шерсти 5")
+            {
+                Upgrade.Instance.WoolproductivityIncrease *=2 ;
+                HidePurchasedItem(btnNo);
+            }
+
             woolUI.text = "wools" + ResourceBank.Instance.Wool.ToString();
             ironUI.text = "irons" + ResourceBank.Instance.Iron.ToString();
             woodUI.text = "woods" + ResourceBank.Instance.Wood.ToString();
@@ -208,4 +337,5 @@ public class ShopManager : MonoBehaviour
     {
         shopPanels[index].gameObject.SetActive(false); 
     }
+  
 }

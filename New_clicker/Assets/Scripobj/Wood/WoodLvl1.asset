@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4dd8d74480569f42ba64f1062806cbe, type: 3}
   m_Name: WoodLvl1
   m_EditorClassIdentifier: 
-  title: Wood 1 lvl
-  description: "\u0423\u043B\u0443\u0447\u0448\u0430\u0435\u0442 \u0432\u0430\u0448\u0443
-    \u0434\u043E\u0431\u044B\u0447\u0443 \u0434\u0435\u0440\u0435\u0432\u0430"
-  rockCost: 5
-  woodCost: 10
-  woolCost: 5
-  ironCost: 5
-  ropeCost: 5
-  leafCost: 5
+  title: "\u0423\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435 \u0434\u0435\u0440\u0435\u0432\u0430"
+  description: "\u0423\u043B\u0443\u0447\u0448\u0430\u0435\u0442 \u0432\u0430\u0448
+    \u043A\u043B\u0438\u043A \u043F\u043E \u0434\u0435\u0440\u0435\u0432\u0443"
+  rockCost: 0
+  woodCost: 50
+  woolCost: 0
+  ironCost: 0
+  ropeCost: 0
+  leafCost: 0

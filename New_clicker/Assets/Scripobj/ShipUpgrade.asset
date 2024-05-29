@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: ShipUpgrade
   m_EditorClassIdentifier: 
   title: UpgShip
-  description: 
-  rockCost: 0
-  woodCost: 0
-  woolCost: 0
-  ironCost: 0
+  description: "\u0412\u044B \u0443\u043B\u0443\u0447\u0448\u0438\u0442\u0435 \u0441\u0432\u043E\u0439
+    \u043A\u043E\u0440\u0430\u0431\u043B\u044C"
+  rockCost: 100
+  woodCost: 50
+  woolCost: 20
+  ironCost: 25
   ropeCost: 0
   leafCost: 0

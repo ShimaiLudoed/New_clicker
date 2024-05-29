@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4dd8d74480569f42ba64f1062806cbe, type: 3}
   m_Name: RockLvl4
   m_EditorClassIdentifier: 
-  title: 
-  description: 
-  rockCost: 0
+  title: "\u0423\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435 \u043A\u0430\u043C\u043D\u044F
+    4"
+  description: "\u0412\u044B \u0443\u043B\u0443\u0447\u0448\u0430\u0435\u0442\u0435
+    \u0441\u0432\u043E\u0439 \u043A\u043B\u0438\u043A \u043F\u043E \u043A\u0430\u043C\u043D\u044E"
+  rockCost: 500
   woodCost: 0
   woolCost: 0
   ironCost: 0
