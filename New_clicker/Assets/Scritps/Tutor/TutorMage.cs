@@ -31,7 +31,19 @@ public class TutorMage : MonoBehaviour
         {
             Infopan5.SetActive(false);
         }
-        
+
+        ShopManager.Instance.ItemSold += ClosePan;
+    }
+
+    
+    private void ClosePan(string obj)
+    {
+        if (!TutorCon.Instance.InfoPan4)
+        {
+            TutorCon.Instance.InfoPan5 = false;
+        }
+        TutorCon.Instance.InfoPan4 = false;
+        Infopan4.SetActive(false);
     }
 
     public void Close1()
@@ -52,7 +64,11 @@ public class TutorMage : MonoBehaviour
     {
         TutorCon.Instance.InfoPan4 = false;
     }
-
+  
+    private void OnDestroy()
+    {
+        ShopManager.Instance.ItemSold -= ClosePan;
+    }
    
    
 

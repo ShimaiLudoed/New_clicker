@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +14,7 @@ public class ShipUpg : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = BuildShip;
     }
-    
+
     public void ApplyUpgrade()
     {
         GetComponent<SpriteRenderer>().sprite = upgradedShipSprite;
@@ -23,4 +24,32 @@ public class ShipUpg : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = endShipSpire;
     }
+
+    private void Start()
+    {
+        ShopManager.Instance.ItemSold += ButtonActive;
+    }
+
+    private void ButtonActive(string obj)
+    {
+        if (obj == "BuildShip")
+        {
+            buildShip();
+        }
+
+        if (obj == "UpgShip")
+        { 
+            ApplyUpgrade();
+        }
+
+        if (obj == "EndGame")
+        {
+            EndGame();
+        }
+    }
+    private void OnDestroy()
+    {
+        ShopManager.Instance.ItemSold -= ButtonActive;
+    }
 }
+

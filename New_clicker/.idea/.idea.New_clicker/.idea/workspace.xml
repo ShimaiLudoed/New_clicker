@@ -7,55 +7,7 @@
     <list default="true" id="95293659-0e66-44c1-b08c-a40eae539d75" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.New_clicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.New_clicker/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Item_template.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Item_template.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/End Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/End Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/G.M.Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/G.M.Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/I.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/I.L.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/L.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/L.L.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/M.M.Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/M.M.Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/R.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/R.L.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/S.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/S.L.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/W.L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/W.L.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/BuyLoc/Unlock Iron.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/BuyLoc/Unlock Iron.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/BuyLoc/Unlock Rock.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/BuyLoc/Unlock Rock.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/BuyLoc/Unlock Wool.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/BuyLoc/Unlock Wool.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/BuyLoc/Unlock leaf.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/BuyLoc/Unlock leaf.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/EndGame.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/EndGame.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Iron/ironlvl 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Iron/ironlvl 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Iron/ironlvl 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Iron/ironlvl 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Iron/ironlvl 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Iron/ironlvl 3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Iron/ironlvl 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Iron/ironlvl 4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Iron/ironlvl 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Iron/ironlvl 5.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Leaf/LeafLvl 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Leaf/LeafLvl 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Leaf/LeafLvl 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Leaf/LeafLvl 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Leaf/LeafLvl 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Leaf/LeafLvl 3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Leaf/LeafLvl 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Leaf/LeafLvl 4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Leaf/LeafLvl 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Leaf/LeafLvl 5.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Leaf/RopeMake.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Leaf/RopeMake.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Rock/RockLvl1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Rock/RockLvl1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Rock/RockLvl2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Rock/RockLvl2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Rock/RockLvl3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Rock/RockLvl3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Rock/RockLvl4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Rock/RockLvl4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Rock/RockLvl5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Rock/RockLvl5.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/ShipBuild.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/ShipBuild.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/ShipUpgrade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/ShipUpgrade.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Wood/WoodLlv5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Wood/WoodLlv5.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Wood/WoodLvl1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Wood/WoodLvl1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Wood/WoodLvl2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Wood/WoodLvl2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Wood/WoodLvl3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Wood/WoodLvl3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Wood/WoodLvl4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Wood/WoodLvl4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Wool/WoolLvl 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Wool/WoolLvl 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Wool/WoolLvl 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Wool/WoolLvl 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Wool/WoolLvl 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Wool/WoolLvl 3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Wool/WoolLvl 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Wool/WoolLvl 4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripobj/Wool/WoolLvl 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripobj/Wool/WoolLvl 5.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scritps/Click.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/Click.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scritps/Scene/Scene_Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/Scene/Scene_Manager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scritps/Shop/ShopManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/Shop/ShopManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scritps/Shop/Upgrade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/Shop/Upgrade.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scritps/resourceBank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scritps/resourceBank.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Build.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +131,8 @@
       <workItem from="1716833849264" duration="3567000" />
       <workItem from="1716891153493" duration="1554000" />
       <workItem from="1716913041510" duration="11384000" />
-      <workItem from="1716978694296" duration="8005000" />
+      <workItem from="1716978694296" duration="8600000" />
+      <workItem from="1717063864174" duration="145000" />
     </task>
     <servers />
   </component>

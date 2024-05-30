@@ -8,7 +8,7 @@ public class Upgrade : MonoBehaviour
     public int WoolproductivityIncrease = 1;
     public int IronproductivityIncrease = 1;
     public int RockproductivityIncrease = 1;
-    public int Leafprod { get; set; }
+    public int Leafprod = 1;
     
     public static Upgrade Instance { get; private set; }
     

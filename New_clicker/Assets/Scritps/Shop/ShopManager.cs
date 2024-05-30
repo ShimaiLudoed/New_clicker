@@ -9,32 +9,18 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
-    [FormerlySerializedAs("IronUI")] public TMP_Text ironUI;
-    [FormerlySerializedAs("WoolUI")] public TMP_Text woolUI;
-    [FormerlySerializedAs("WoodUI")] public TMP_Text woodUI;
-    [FormerlySerializedAs("RockUI")] public TMP_Text rockUI;
-    [FormerlySerializedAs("LeafUI")] public TMP_Text leafUI;
-    [FormerlySerializedAs("RopeUI")] public TMP_Text ropeUI;
-    [FormerlySerializedAs("UnlockRockTP")] public GameObject unlockRockTp;
-    [FormerlySerializedAs("UnlockIronTP")] public GameObject unlockIronTp;
-    [FormerlySerializedAs("UnlockLeafTP")] public GameObject unlockLeafTp;
-    [FormerlySerializedAs("Rope")] public GameObject rope;
-    [FormerlySerializedAs("UnlockwoolTP")] public GameObject unlockwoolTp;
-    public GameObject EndGameTP;
+
     public ShopItem[] shopItems;
     public ShopTemplate[] shopPanels;
     public GameObject player;
     private Animator _characterAnimator;
     public Button[] mypurch;
     public ShipUpg shipUpg;
-    [FormerlySerializedAs("RockUi")] public GameObject rockUi;
-    [FormerlySerializedAs("LeafUi")] public GameObject leafUi;
-    [FormerlySerializedAs("RopeUi")] public GameObject ropeUi;
-    [FormerlySerializedAs("IronUi")] public GameObject ironUi;
-    [FormerlySerializedAs("WoolUi")] public GameObject woolUi;
+    private Teleport _teleport;
     private TutorMage _tutor;
-    [FormerlySerializedAs("Infopan")] public GameObject infopan;
 
+    
+    public event Action<string> ItemSold; 
     
     void Start()
     {
@@ -42,53 +28,8 @@ public class ShopManager : MonoBehaviour
         {
             shopPanels[i].gameObject.SetActive(true);
         }
-
-        ropeUI.text = "ropes" + ResourceBank.Instance.Rope.ToString();
-        leafUI.text = "leafs" + ResourceBank.Instance.Leaf.ToString();
-        woodUI.text = "woods" + ResourceBank.Instance.Wood.ToString();
-        rockUI.text = "rocks" + ResourceBank.Instance.Rock.ToString();
-        woolUI.text = "wools" + ResourceBank.Instance.Wool.ToString();
-        ironUI.text = "irons" + ResourceBank.Instance.Iron.ToString();
-        
         Loadpanels();
         CheckPurchare();
-
-        if (ResourceBank.Instance.endGameIsUnl)
-        {
-            EndGameTP.SetActive(true);
-        }
-        
-        if (ResourceBank.Instance.isRockLocationUnlocked)
-        {
-            unlockRockTp.SetActive(true);
-            rockUi.SetActive(true);
-            
-        }
-        if (ResourceBank.Instance.isLeafLocationUnlocked)
-        {
-            unlockLeafTp.SetActive(true);
-            rope.SetActive(true);
-            leafUi.SetActive(true);
-            ropeUi.SetActive(true);
-        }
-        if (ResourceBank.Instance.isIronLocationUnlocked)
-        {
-            unlockIronTp.SetActive(true);
-            ironUi.SetActive(true);
-        }
-        if (ResourceBank.Instance.isWoolLocationUnlocked)
-        {
-            unlockwoolTp.SetActive(true);
-            woolUi.SetActive(true);
-        }
-        
-        _characterAnimator = player.GetComponent<Animator>();
-        if (_characterAnimator == null)
-        {
-            Debug.LogError("Animator component not found on the player!");
-        }
-        
-
     }
     public void CheckPurchare()
     {
@@ -118,55 +59,51 @@ public class ShopManager : MonoBehaviour
             
             if (shopItems[btnNo].title == "BuildShip")
             {
-                shipUpg.buildShip();
+               
                HidePurchasedItem(btnNo);
             }
             
             if (shopItems[btnNo].title == "UpgShip")
-            {
-                shipUpg.ApplyUpgrade();
+            { 
+           
              HidePurchasedItem(btnNo);
             }
             
             if (shopItems[btnNo].title == "EndGame")
             {
-                shipUpg.EndGame();
+               
                 HidePurchasedItem(btnNo);
                 ResourceBank.Instance.endGameIsUnl = true;
-                Start(); 
             }
 
             if (shopItems[btnNo].title == "Локация с камнем")
             {
                 ResourceBank.Instance.isRockLocationUnlocked = true;
-                unlockRockTp.SetActive(true); 
+         
                 HidePurchasedItem(btnNo);
-                rockUi.SetActive(true);
-                TutorCon.Instance.InfoPan5 = false;
-                infopan.SetActive(false);
             }
             
             if (shopItems[btnNo].title == "Локация с железом")
             {
-                unlockIronTp.SetActive(true);
+           
                 ResourceBank.Instance.isIronLocationUnlocked = true;
               HidePurchasedItem(btnNo);
-                ironUi.SetActive(true);
+            
             }
             if (shopItems[btnNo].title == "Локация с растенями")
             {
                 ResourceBank.Instance.isLeafLocationUnlocked = true;
-                unlockLeafTp.SetActive(true);
-                rope.SetActive(true);
+      
+         
                 HidePurchasedItem(btnNo);
-                leafUi.SetActive(true);
+          
             }
             if (shopItems[btnNo].title == "Локация с овцами")
             {
                 ResourceBank.Instance.isWoolLocationUnlocked = true;
-                unlockwoolTp.SetActive(true);
+           
                 HidePurchasedItem(btnNo);
-                woolUi.SetActive(true);
+           
             }
             
             if (shopItems[btnNo].title == "Улучшение дерева")
@@ -300,23 +237,13 @@ public class ShopManager : MonoBehaviour
                 HidePurchasedItem(btnNo);
             }
 
-            woolUI.text = "wools" + ResourceBank.Instance.Wool.ToString();
-            ironUI.text = "irons" + ResourceBank.Instance.Iron.ToString();
-            woodUI.text = "woods" + ResourceBank.Instance.Wood.ToString();
-            rockUI.text = "rocks" + ResourceBank.Instance.Rock.ToString();
-            leafUI.text = "leafs" + ResourceBank.Instance.Leaf.ToString();
-            ropeUI.text = "ropes" + ResourceBank.Instance.Rope.ToString();
             CheckPurchare();
+            ItemSold?.Invoke(shopItems[btnNo].title);
         }
     }
     void Update()
     {
-        ropeUI.text = "ropes" + ResourceBank.Instance.Rope.ToString();
-        leafUI.text = "leafs" + ResourceBank.Instance.Leaf.ToString();
-        rockUI.text = "rocks" + ResourceBank.Instance.Rock.ToString();
-        woolUI.text = "wools" + ResourceBank.Instance.Wool.ToString();
-        woodUI.text = "woods" + ResourceBank.Instance.Wood.ToString();
-        ironUI.text = "irons" + ResourceBank.Instance.Iron.ToString();
+
         CheckPurchare();
     }
     public void Loadpanels ()
@@ -337,5 +264,23 @@ public class ShopManager : MonoBehaviour
     {
         shopPanels[index].gameObject.SetActive(false); 
     }
-  
+    
+    public static ShopManager Instance { get; private set; }
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(target:this);
+        for (var index = 0; index < mypurch.Length; index++)
+        {
+            var Taken = mypurch[index];
+            var index1 = index;
+            Taken.onClick.AddListener(()=> PurchItem(index1));
+        }
+    }  
+    
 }

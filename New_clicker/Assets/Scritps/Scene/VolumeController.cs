@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     private static AudioManager instance;
     private AudioSource musicSource;
+    public AudioClip soundClip;
 
     public static AudioManager Instance
     {
@@ -39,5 +40,12 @@ public class AudioManager : MonoBehaviour
         {
             musicSource.volume = Mathf.Clamp01(volume); // Устанавливаем громкость в диапазоне от 0 до 1
         }
+    }
+    void Start()
+    {
+        musicSource = gameObject.AddComponent<AudioSource>();
+        musicSource.clip = soundClip;
+        musicSource.loop = true;
+        musicSource.Play();
     }
 }

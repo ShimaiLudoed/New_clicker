@@ -4,12 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneManager : MonoBehaviour
+public class _SceneManager : MonoBehaviour
 {
     public void PlayGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("G.M.Scene");
-      
     }
 
     public void WoodTp()
@@ -48,6 +47,11 @@ public class SceneManager : MonoBehaviour
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("M.M.Scene");
         }
+    }
+
+    private void Start()
+    {
+        ShopManager.Instance.gameObject.SetActive(SceneManager.GetActiveScene().name=="G.M.Scene");
     }
 }
 

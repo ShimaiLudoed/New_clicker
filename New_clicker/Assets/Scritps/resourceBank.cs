@@ -31,6 +31,15 @@ public static ResourceBank Instance { get; private set; }
     public bool isWoolLocationUnlocked;
     [FormerlySerializedAs("EndGameIsUnl")] public bool endGameIsUnl;
 
-
-
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Keypad7))
+        {
+            ResourceBank.Instance.Iron += 250;
+            ResourceBank.Instance.Leaf += 250;
+            ResourceBank.Instance.Wool += 250;
+            ResourceBank.Instance.Rock += 250;
+            ResourceBank.Instance.Wood += 250;
+        }
+    }
 }
